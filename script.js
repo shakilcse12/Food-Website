@@ -1,5 +1,13 @@
 const apiBaseUrl = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 
+
+// Handling the Hamburger Menu
+const hamburger = document.getElementById('hamburger');
+const dropdown = document.getElementById('dropdown');
+hamburger.addEventListener('click', () => {
+  dropdown.classList.toggle('hidden');
+});
+
 // Function to remove selected class from all buttons
 function resetButtonStyles() {
   const categoryButtons = document.querySelectorAll('.category-btn');
