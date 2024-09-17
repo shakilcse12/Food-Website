@@ -12,8 +12,8 @@ hamburger.addEventListener('click', () => {
 function resetButtonStyles() {
   const categoryButtons = document.querySelectorAll('.category-btn');
   categoryButtons.forEach(button => {
-    button.classList.remove('bg-orange-500', 'text-white'); // Remove selected styles
-    button.classList.add('bg-gray-200', 'text-gray-800'); // Reset to default styles
+    button.classList.remove('bg-orange-500', 'text-white'); 
+    button.classList.add('bg-gray-200', 'text-gray-800');
   });
 }
 
@@ -24,8 +24,8 @@ function addCategoryButtonEventListeners() {
   categoryButtons.forEach(button => {
     button.addEventListener('click', () => {
       resetButtonStyles(); // Reset other buttons' styles
-      button.classList.remove('bg-gray-200', 'text-gray-800'); // Remove default styles
-      button.classList.add('bg-orange-500', 'text-white'); // Add selected styles
+      button.classList.remove('bg-gray-200', 'text-gray-800'); 
+      button.classList.add('bg-orange-500', 'text-white'); 
 
       const category = button.dataset.category;
       fetchMeals(category);
@@ -47,7 +47,7 @@ async function fetchMeals(category) {
 // Display Meals in the Food Section
 function displayMeals(meals) {
   const foodSection = document.getElementById('food-section');
-  foodSection.innerHTML = ''; // Clear previous meals
+  foodSection.innerHTML = ''; 
 
   meals.forEach(meal => {
     const mealCard = `
@@ -65,7 +65,7 @@ function displayMeals(meals) {
 
 // Load first category by default when the page loads
 window.addEventListener('DOMContentLoaded', () => {
-  const firstCategory = 'Potato'; // Set the first category you want to load by default
+  const firstCategory = 'Potato'; 
   fetchMeals(firstCategory);
 
   // Manually mark the first button as selected
