@@ -15,59 +15,39 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="bg-white-100">
     <header>
       <!-- Navbar -->
-      <nav class="flex justify-between items-center p-4 bg-white-100 shadow-md">
+      <nav class="flex justify-between items-center p-4 bg-white-100 shadow-md z-50">
         <div class="flex items-center">
           <img src="resources/food-logo.jpeg" alt="logo" class="h-10 w-10" />
           <span class="text-xl font-bold ml-2">Foodie's Paradise</span>
         </div>
         <div class="hidden lg:flex space-x-4">
-          <button class="btn category-btn" data-category="Potato">
+          <button class="btn category-btn bg-white-200 hover:bg-gray-300 text-gray-800" data-category="Potato">
             Potato
           </button>
-          <button class="btn category-btn" data-category="Soup">Soup</button>
-          <button class="btn category-btn" data-category="Chicken">
+          <button class="btn category-btn bg-white-200 hover:bg-gray-300 text-gray-800" data-category="Soup">Soup</button>
+          <button class="btn category-btn bg-white-200 hover:bg-gray-300 text-gray-800" data-category="Chicken">
             Chicken
           </button>
-          <button class="btn category-btn" data-category="Beef">Beef</button>
-        </div>
-        <div class="lg:hidden">
-          <button id="hamburger" class="btn btn-square">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+          <button class="btn category-btn bg-white-200 hover:bg-gray-300 text-gray-800" data-category="Beef">Beef</button>
         </div>
       </nav>
       <!-- Navbar ends -->
 
       <!-- Banner (Carousel) -->
-      <div class="carousel w-full h-64 md:h-80 lg:h-96 mt-1">
+      <div class="carousel w-full h-64 md:h-80 lg:h-96 mt-1 z-10">
         <div id="slide1" class="carousel-item relative w-full">
-          <div
-            class="hero"
-            style="background-image: url(resources/food-1.jpg)"
-          >
+          <div class="hero" style="background-image: url(resources/food-1.jpg)">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-neutral-content text-center">
               <div class="max-w-md">
                 <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
                 <p class="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  Bite into our golden, crispy fried chicken, seasoned to
+                  perfection with a blend of herbs and spices. Juicy on the
+                  inside, crunchy on the outside.
                 </p>
               </div>
             </div>
@@ -80,18 +60,15 @@
           </div>
         </div>
         <div id="slide2" class="carousel-item relative w-full">
-          <div
-            class="hero"
-            style="background-image: url(resources/food-2.jpg)"
-          >
+          <div class="hero" style="background-image: url(resources/food-2.jpg)">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-neutral-content text-center">
               <div class="max-w-md">
-                <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                <h1 class="mb-5 text-5xl font-bold">Hearty Potato Soup</h1>
                 <p class="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  Warm up with our creamy and hearty potato soup, made with
+                  fresh ingredients and a touch of love. Perfect for those
+                  chilly days when you need something comforting.
                 </p>
               </div>
             </div>
@@ -104,18 +81,15 @@
           </div>
         </div>
         <div id="slide3" class="carousel-item relative w-full">
-          <div
-            class="hero"
-            style="background-image: url(resources/food-3.png)"
-          >
+          <div class="hero" style="background-image: url(resources/food-3.png)">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-neutral-content text-center">
               <div class="max-w-md">
-                <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                <h1 class="mb-5 text-5xl font-bold">Tender Beef Steak</h1>
                 <p class="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  Indulge in our tender, perfectly grilled beef steak, cooked to
+                  your preference and served with a rich garlic butter sauce. A
+                  true feast for meat lovers.
                 </p>
               </div>
             </div>
@@ -128,10 +102,23 @@
           </div>
         </div>
       </div>
-      <!-- Banner (Carousel) -->
-
+      <!-- Banner (Carousel) ends-->
     </header>
-    <main></main>
+
+    <main>
+         <!-- API Section -->
+      <section class="container mx-auto p-6">
+        <h2 class="text-3xl font-bold text-center mb-6">Our Menu</h2>
+        <div
+          id="food-section"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          <!-- Food cards will be dynamically inserted here -->
+        </div>
+      </section>
+      <!-- API Section ends-->
+    </main>
     <footer></footer>
+    <script src="script.js"></script>
   </body>
 </html>
